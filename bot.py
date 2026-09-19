@@ -2,17 +2,18 @@ import random
 destinations={
     "beaches":["goa","maldives","andaman and nicobar"],
     "mountains":["himalayas","alps","rocky mountains"],
-    "cities":["paris","tokyo","venice"]
+    "cities":["paris","tokyo","venice"],
+    "jungles":["amazon,congo rainforest,pacific temparate rainforest"]
               }
 jokes=[
     "why dont programmers like nature? too many bugs!",
     "why did the computer go to the doctor? it had a virus!",
-    "If your computer isn't working properly and you don't understand why... ...just hit it a bunch of times with a hammer. It still won't work properly, but at least you'll understand why."]
+    "If your computer isn't working properly and you don't understand why... ...just hit it a bunch of times with a hammer. It still won't work properly, but at least you'll understand why.","Why was the computer cold? it left its windows open"]
 def recommend():
-    choice= input("beaches,mountains or cities?").lower()
+    choice= input("beaches,mountains,jungles or cities?").lower()
     if choice in destinations:
         place=random.choice(destinations[choice])
-        like=input(f"try{place}! do you like it?(yes/no):").lower()
+        like=input(f"try {place}! do you like it?(yes/no):").lower()
 
         if like=="yes":
             print(f"enjoy your trip to {place}!")
